@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+//        maven{
+//            url uri('C:\\Users\\conta\\AndroidStudioProjects\\New Oxp_SDK\\offerxp-sdk-src\\app\\offerxp-sdk\\build\\repo')
+//        }
+    }
+}
+rootProject.name = "Pikachu"
+include ':app'
