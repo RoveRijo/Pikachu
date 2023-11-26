@@ -13,6 +13,14 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-
     </style>
+
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#ffff</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/pikachu_launcher_ic_round_with_bg</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="postSplashScreenTheme">@style/Theme.Pikachu</item>
+        <item name="android:windowSplashScreenBrandingImage">@mipmap/brand_text_splash</item>
+    </style>
+
 </resources>
