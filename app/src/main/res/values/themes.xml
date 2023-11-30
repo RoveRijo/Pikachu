@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Pikachu" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.Pikachu" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/theme_primary</item>
         <item name="colorPrimaryVariant">@color/theme_primary_dark</item>
@@ -20,7 +20,6 @@
         <item name="windowSplashScreenAnimatedIcon">@mipmap/pikachu_launcher_ic_round_with_bg</item>
         <item name="windowSplashScreenAnimationDuration">500</item>
         <item name="postSplashScreenTheme">@style/Theme.Pikachu</item>
-        <item name="android:windowSplashScreenBrandingImage">@mipmap/brand_text_splash</item>
     </style>
 
 </resources>

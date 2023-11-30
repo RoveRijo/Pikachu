@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary_dark">
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enterMobileNumTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/please_enter_mobile_for_otp"
+        android:textColor="@color/fade_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTxt" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mobileNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/layout_background"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterMobileNumTxt">
+
+        <TextView
+            android:id="@+id/mobNumberTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/phone_number"
+            android:textColor="@color/theme_primary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.pikachu.app.customViews.ContextActionAutoCompleteTextView
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="phoneNational"
+            android:background="@drawable/bg_edittext"
+            android:completionThreshold="0"
+            android:digits="0123456789"
+            android:drawableStart="@drawable/baseline_phone_24"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/rubik_regular"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="yes"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mobNumberTxt"
+            tools:text="9876543210">
+
+            <requestFocus />
+        </com.pikachu.app.customViews.ContextActionAutoCompleteTextView>
+
+        <TextView
+            android:id="@+id/mobNumberErrorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/error_red"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber"
+            app:layout_goneMarginStart="20dp"
+            tools:text="@string/error_phone_number_should_contain_10_digits" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/termsAndConditions_privacy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNumberLayout">
+
+        <CheckBox
+            android:id="@+id/cb_termsAndConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:buttonTint="@color/theme_primary"
+            android:textColor="@color/theme_primary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_termsAndConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/i_agree_tandc"
+                android:textColor="@color/theme_primary"
+                android:textColorLink="@color/theme_primary_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tnc_agree_error_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/please_click_checkbox_to_proceed"
+                android:textColor="@color/error_red"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSendOtp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/primary_action_color"
+        android:paddingVertical="14dp"
+        android:text="@string/send_otp"
+        android:textColor="@color/theme_primary"
+        app:cornerRadius="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsAndConditions_privacy_layout" />
+
+    <TextView
+        android:id="@+id/loginDisabledBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="42dp"
+        android:text="@string/login_disabled_txt"
+        android:textAlignment="center"
+        android:textColor="@color/error_red"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btnSendOtp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

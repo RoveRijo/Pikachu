@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Pikachu</string>
+    <string name="welcome">Welcome!</string>
+    <string name="please_enter_mobile_for_otp">Enter your mobile number to receive OTP.</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name="error_phone_number_should_contain_10_digits">Phone number should contain 10 digits</string>
+    <string name="i_agree_tandc"><![CDATA[By clicking this checkbox you agree to the Terms & Conditions and the Privacy Policy. Please click the links and read them carefully before proceeding.]]></string>
+    <string name="please_click_checkbox_to_proceed">Please click on the checkbox to proceed</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="login_disabled_txt">Technical maintenance in progress. Please try logging in later</string>
+    <string name="check_internet_connection">Please Check your Internet Connection</string>
+    <string name="terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
 </resources>
