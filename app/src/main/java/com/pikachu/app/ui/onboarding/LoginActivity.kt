@@ -1,8 +1,7 @@
-package com.pikachu.app.ui
+package com.pikachu.app.ui.onboarding
 
 import android.content.ClipDescription
 import android.content.ClipboardManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.SpannableStringBuilder
@@ -14,6 +13,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import androidx.core.view.isVisible
 import com.pikachu.app.R
+import com.pikachu.app.application.ActivityLauncher
 import com.pikachu.app.application.URL_PRIVACY_POLICIES
 import com.pikachu.app.application.URL_TERMS_CONDITIONS
 import com.pikachu.app.base.BaseActivity
@@ -89,23 +89,24 @@ class LoginActivity : BaseActivity(), WebViewDialogueListener {
                 }
             })
         binding.btnSendOtp.setOnClickListener { v ->
-            if (!isValid(getPhoneNumber())) {
-                binding.mobNumberErrorTxt.isVisible = true
-                binding.mobNumberErrorTxt.text =
-                    getString(R.string.error_phone_number_should_contain_10_digits)
-            } else if (!binding.cbTermsAndConditions.isChecked) {
-                //Events.loginTnCError()
-                binding.tncAgreeErrorTxt.visibility = View.VISIBLE
-            } else {
-                //Events.loginSendOtpClicked()
-                if (isPhnoEdited) {
-                    //Analytics.logEvent(FirebaseConstants.EVENT_PHNO_FILLED_MANUALLY)
-                }
-                loadOtpActivity()
-                hideSoftKeyboard(this@LoginActivity)
-                //Starting Scan and Analyse Sms on Send OTP
-                //SMSStorageManager.getInstance(getApplicationContext()).startScanAndAnalyseSMS();
-            }
+//            if (!isValid(getPhoneNumber())) {
+//                binding.mobNumberErrorTxt.isVisible = true
+//                binding.mobNumberErrorTxt.text =
+//                    getString(R.string.error_phone_number_should_contain_10_digits)
+//            } else if (!binding.cbTermsAndConditions.isChecked) {
+//                //Events.loginTnCError()
+//                binding.tncAgreeErrorTxt.visibility = View.VISIBLE
+//            } else {
+//                //Events.loginSendOtpClicked()
+//                if (isPhnoEdited) {
+//                    //Analytics.logEvent(FirebaseConstants.EVENT_PHNO_FILLED_MANUALLY)
+//                }
+//                loadOtpActivity()
+//                hideSoftKeyboard(this@LoginActivity)
+//                //Starting Scan and Analyse Sms on Send OTP
+//                //SMSStorageManager.getInstance(getApplicationContext()).startScanAndAnalyseSMS();
+//            }
+            ActivityLauncher.launchOtpActivity(this,"9947619698")
         }
         binding.cbTermsAndConditions.setOnCheckedChangeListener { buttonView, isChecked ->
             binding.tncAgreeErrorTxt.visibility = View.INVISIBLE

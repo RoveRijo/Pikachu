@@ -2,7 +2,8 @@ package com.pikachu.app.application
 
 import android.app.Activity
 import android.content.Intent
-import com.pikachu.app.ui.LoginActivity
+import com.pikachu.app.ui.onboarding.LoginActivity
+import com.pikachu.app.ui.onboarding.OtpActivity
 
 
 object ActivityLauncher {
@@ -21,6 +22,12 @@ object ActivityLauncher {
         }
         //intent.putExtra(AppConstants.BUNDLE_IS_CALLED_FROM_DEEP_LINK, isCalledFromDeepLink)
         activity.startActivity(intent)
+    }
+
+    fun launchOtpActivity(activity: Activity, phoneNumber: String?) {
+        val intent = Intent(activity, OtpActivity::class.java)
+        intent.putExtra(BUNDLE_PHONE_NUMBER, phoneNumber)
+        activity.startActivityForResult(intent, REQUEST_OTP_VERIFCATION)
     }
 
 

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary_dark">
+
+    <LinearLayout
+        android:id="@+id/llProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+
+        <TextView
+            android:id="@+id/tvProgressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:text="@string/loading_please_wait"
+            android:textColor="@color/fade_text"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/enterOtpTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/enter_otp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pleaseEnterCodeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/please_type_the_verification_code"
+        android:textColor="@color/fade_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterOtpTxt" />
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        tools:text="+919876543210"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvChangePhoneNumber"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pleaseEnterCodeTxt" />
+
+    <TextView
+        android:id="@+id/tvChangePhoneNumber"
+        android:background="@drawable/layout_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:text="@string/edit_caps"
+        android:textColor="@color/theme_primary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPhoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPhoneNumber"
+        app:layout_constraintTop_toTopOf="@+id/tvPhoneNumber" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="32dp"
+        android:id="@+id/etOtpLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/layout_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber"
+        >
+
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/etOtp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="16dp"
+            android:autofillHints="smsOTPCode"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="yes"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="32sp"
+            android:textColor="@color/theme_primary"
+            android:textIsSelectable="false"
+            app:pinBackgroundDrawable="@drawable/otp_text_rect_background"
+            app:pinBackgroundIsSquare="true"
+            app:pinLineStroke="2dp"
+            tools:text="1234"
+            app:pinLineStrokeSelected="4dp">
+
+            <requestFocus />
+        </com.alimuzaffar.lib.pin.PinEntryEditText>
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerifyOtp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="32dp"
+        android:paddingVertical="14dp"
+        android:backgroundTint="@color/primary_action_color"
+        android:textColor="@color/theme_primary"
+        app:cornerRadius="200dp"
+        android:text="@string/verify_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etOtpLayout" />
+
+    <TextView
+        android:id="@+id/tvResendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/resend_otp"
+        android:textColor="@color/fade_text"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_waiting_txt" />
+
+    <TextView
+        android:id="@+id/otp_waiting_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/waiting_for_sms"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvSeconds"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerifyOtp" />
+
+    <TextView
+        android:id="@+id/tvSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/sample_seconds"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/otp_waiting_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/otp_waiting_txt"
+        app:layout_constraintTop_toTopOf="@+id/otp_waiting_txt" />
+
+    <TextView
+        android:id="@+id/otpRequestOverloadedBnr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="42dp"
+        android:text="@string/too_many_otp_request_label"
+        android:textAlignment="center"
+        android:textColor="@color/error_red"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etOtpLayout"
+        app:layout_constraintVertical_bias="0.60"
+        tools:layout_editor_absoluteX="42dp" />
+
+    <LinearLayout
+        android:id="@+id/otp_report_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_waiting_txt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/facing_issues" />
+
+        <TextView
+            android:id="@+id/reportBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:background="@drawable/layout_background"
+            android:layout_marginStart="8dp"
+            android:text="@string/report"
+            android:textColor="@color/theme_primary" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

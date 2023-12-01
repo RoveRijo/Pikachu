@@ -11,4 +11,16 @@
     <string name="check_internet_connection">Please Check your Internet Connection</string>
     <string name="terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="loading_please_wait">Loading please wait...</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="please_type_the_verification_code">Please enter the 4 digit code sent to you at</string>
+    <string name="edit_caps">EDIT</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="waiting_for_sms">Waiting for SMS</string>
+    <string name="sample_seconds">30s</string>
+    <string name="too_many_otp_request_label">Too many OTP requests. Please try again after 15 minutes</string>
+    <string name="facing_issues">Facing issues?</string>
+    <string name="report">Report</string>
+    <string name="country_code_india">+91</string>
 </resources>

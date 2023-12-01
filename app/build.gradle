@@ -21,9 +21,26 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Signing Config (same as release)
+            //signingConfig signingConfigs.release
+
+            // BuildConfig Fields
+            buildConfigField "String", "SERVER_URL", '"https://satya-stg.udhaar.co/"'
+            buildConfigField "String", "MIXPANEL_TOKEN", '"626896916fdacec5e1fefd61926776ac"'
+
+        }
         release {
-            minifyEnabled false
+            minifyEnabled true
+            // Enables resource shrinking, which is performed by the Android Gradle plugin.
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Signing Config
+            //signingConfig signingConfigs.release
+
+            // BuildConfig Fields
+            buildConfigField "String", "SERVER_URL", '"https://api.drona.consights.tech/"'
+            buildConfigField "String", "MIXPANEL_TOKEN", '"2c942f36f0f62fb8dae68dccea77bb0d"'
         }
     }
     compileOptions {
@@ -66,8 +83,20 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "androidx.core:core-splashscreen:1.0.1"
 
-    // Gson
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    //OTP UI
+    implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        // Exclude is only needed if you already have
+        // androidx.appcompat as a dependency in your app.
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+    // Chuck
+    debugImplementation "com.github.ChuckerTeam.Chucker:library:3.5.2"
+    releaseImplementation "com.github.ChuckerTeam.Chucker:library-no-op:3.5.2"
 
 
     testImplementation 'junit:junit:4.13.2'

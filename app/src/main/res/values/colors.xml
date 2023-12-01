@@ -2,10 +2,12 @@
 <resources>
     <color name="theme_primary">#ffffff</color>
     <color name="theme_primary_dark">#d9ab9b</color>
+<!--    <color name="theme_primary_dark">#fae0ac</color>-->
     <color name="black">#000000</color>
     <color name="fade_text">#333333</color>
     <color name="error_red">#E94E4E</color>
     <color name="primary_action_color">#99000000</color>
     <color name="container_bg">#4D000000</color>
+    <color name="focused">#fff9c4</color>
 </resources>
 

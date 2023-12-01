@@ -1,0 +1,12 @@
+package com.pikachu.app.network.api
+
+const val CUSTOM_HEADER_KEY_AT = "@"
+const val CUSTOM_HEADER_VALUE_NO_AUTH = "NoAuth"
+const val CUSTOM_HEADER_NO_AUTH =
+    "$CUSTOM_HEADER_KEY_AT:$CUSTOM_HEADER_VALUE_NO_AUTH"
+const val CUSTOM_TOKEN_KEY = "*"
+const val STATUS_OK = 200
+const val STATUS_BAD_REQUEST = 400
+const val STATUS_UNAUTHORIZED = 401
+const val STATUS_NEED_UPGRADE = 426
+const val STATUS_INTERNAL_SERVER_ERROR = 500
