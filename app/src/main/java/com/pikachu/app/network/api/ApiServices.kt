@@ -24,7 +24,7 @@ interface ApiService {
      */
 
     // Onboardinng APIs
-    @POST("otp/obtain/")
+    @POST("otp/")
     @Headers(CUSTOM_HEADER_NO_AUTH)
     fun requestOtp(@Body phoneNumber: JsonObject?): Call<BaseApiResponse<OtpResponse?>?>?
 
@@ -35,7 +35,7 @@ interface ApiService {
     @GET("user/profile/")
     fun getUserProfile(): Call<BaseApiResponse<UserProfile?>?>?
 
-    @POST("token/refresh/")
+    @POST("token-refresh/")
     @Headers(CUSTOM_HEADER_NO_AUTH)
     fun getNewAuthToken(@Body tokenRefreshRequest: TokenRefreshRequest): Call<BaseApiResponse<RefreshTokenResponse?>?>?
 

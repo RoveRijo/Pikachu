@@ -38,7 +38,7 @@ class TokenAuthenticator : Authenticator {
     private fun getUpdatedToken(): String? {
         val refreshToken = PreferenceHelper.instance?.getRefreshToken()
         val authTokenResponse = refreshToken?.let { TokenRefreshRequest(it) }?.let {
-            ApiClient.getInstance()?.getSmcApis()?.getNewAuthToken(
+            ApiClient.getInstance()?.getPikachuApis()?.getNewAuthToken(
                 it
             )?.execute()
         }

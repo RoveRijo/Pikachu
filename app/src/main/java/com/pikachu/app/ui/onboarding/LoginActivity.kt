@@ -33,6 +33,7 @@ class LoginActivity : BaseActivity(), WebViewDialogueListener {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //Events.loginScreenShown()
         initViews()
     }
     private fun initViews() {
@@ -89,24 +90,23 @@ class LoginActivity : BaseActivity(), WebViewDialogueListener {
                 }
             })
         binding.btnSendOtp.setOnClickListener { v ->
-//            if (!isValid(getPhoneNumber())) {
-//                binding.mobNumberErrorTxt.isVisible = true
-//                binding.mobNumberErrorTxt.text =
-//                    getString(R.string.error_phone_number_should_contain_10_digits)
-//            } else if (!binding.cbTermsAndConditions.isChecked) {
-//                //Events.loginTnCError()
-//                binding.tncAgreeErrorTxt.visibility = View.VISIBLE
-//            } else {
-//                //Events.loginSendOtpClicked()
-//                if (isPhnoEdited) {
-//                    //Analytics.logEvent(FirebaseConstants.EVENT_PHNO_FILLED_MANUALLY)
-//                }
-//                loadOtpActivity()
-//                hideSoftKeyboard(this@LoginActivity)
-//                //Starting Scan and Analyse Sms on Send OTP
-//                //SMSStorageManager.getInstance(getApplicationContext()).startScanAndAnalyseSMS();
-//            }
-            ActivityLauncher.launchOtpActivity(this,"9947619698")
+            if (!isValid(getPhoneNumber())) {
+                binding.mobNumberErrorTxt.isVisible = true
+                binding.mobNumberErrorTxt.text =
+                    getString(R.string.error_phone_number_should_contain_10_digits)
+            } else if (!binding.cbTermsAndConditions.isChecked) {
+                //Events.loginTnCError()
+                binding.tncAgreeErrorTxt.visibility = View.VISIBLE
+            } else {
+                //Events.loginSendOtpClicked()
+                if (isPhnoEdited) {
+                    //Analytics.logEvent(FirebaseConstants.EVENT_PHNO_FILLED_MANUALLY)
+                }
+                loadOtpActivity()
+                hideSoftKeyboard(this@LoginActivity)
+                //Starting Scan and Analyse Sms on Send OTP
+                //SMSStorageManager.getInstance(getApplicationContext()).startScanAndAnalyseSMS();
+            }
         }
         binding.cbTermsAndConditions.setOnCheckedChangeListener { buttonView, isChecked ->
             binding.tncAgreeErrorTxt.visibility = View.INVISIBLE
@@ -173,7 +173,7 @@ class LoginActivity : BaseActivity(), WebViewDialogueListener {
     }
 
     private fun loadOtpActivity() {
-        //ActivityLauncher.launchOtpActivity(this, getPhoneNumber())
+        ActivityLauncher.launchOtpActivity(this, getPhoneNumber())
     }
 
     private fun clickTermsConditionsAndPrivacyPolicies() {

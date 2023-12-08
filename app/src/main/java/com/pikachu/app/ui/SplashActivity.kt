@@ -16,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         if (isUserLoggedIn() /*&& Utils.allPermissionsGranted(this@SplashActivity)*/) {
-            //ActivityLauncher.launchHomeActivity(this)
+            ActivityLauncher.launchHomeActivity(this)
             finish()
         } else {
             ActivityLauncher.launchLoginActivity(this)

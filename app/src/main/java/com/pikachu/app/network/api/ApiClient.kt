@@ -28,7 +28,7 @@ class ApiClient private constructor(context: Context) {
     //private val gsonInstance = GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX").create()
     private val gsonInstance = GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ZZZZZ").create()
     private var udhaarApis: ApiService? = null
-    fun getSmcApis(): ApiService? {
+    fun getPikachuApis(): ApiService? {
         return instance!!.udhaarApis
     }
 

@@ -12,7 +12,8 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- Disabling autofill background color. -->
+        <item name="android:autofilledHighlight">@android:color/transparent</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.SplashScreen">

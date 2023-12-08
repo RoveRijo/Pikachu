@@ -23,4 +23,5 @@
     <string name="facing_issues">Facing issues?</string>
     <string name="report">Report</string>
     <string name="country_code_india">+91</string>
+    <string name="some_problem_occurred">Some problem occured!</string>
 </resources>

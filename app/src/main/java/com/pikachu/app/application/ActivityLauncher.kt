@@ -2,6 +2,7 @@ package com.pikachu.app.application
 
 import android.app.Activity
 import android.content.Intent
+import com.pikachu.app.ui.HomeActivity
 import com.pikachu.app.ui.onboarding.LoginActivity
 import com.pikachu.app.ui.onboarding.OtpActivity
 
@@ -28,6 +29,14 @@ object ActivityLauncher {
         val intent = Intent(activity, OtpActivity::class.java)
         intent.putExtra(BUNDLE_PHONE_NUMBER, phoneNumber)
         activity.startActivityForResult(intent, REQUEST_OTP_VERIFCATION)
+    }
+
+    fun launchHomeActivity(activity: Activity){
+        val intent = Intent(activity, HomeActivity::class.java)
+        // Add the flags to the intent to clear all tasks and start the new activity in a new task
+        intent.flags =
+            Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        activity.startActivity(intent)
     }
 
 

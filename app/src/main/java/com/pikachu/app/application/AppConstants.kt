@@ -65,6 +65,8 @@ const val CONTACT_NUMBER = "+919947619698"
 
 // Supported Image Formats
 
+const val GENERIC_ERROR_MESSAGE = "Unknown error! Please try later"
+
 val SUPPORTED_IMAGE_FORMATS = listOf("jpg", "jpeg", "png", "bmp", "tiff", "tif")
 
 
