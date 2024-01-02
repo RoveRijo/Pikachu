@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/focused"
+    android:padding="16dp"
+    tools:context=".ui.home.bottomMenuFragments.home.views.AutoScrollingOptionsFragment">
+
+    <ImageView
+        android:id="@+id/quick_sell_icon"
+        android:layout_width="@dimen/main_options_ic_size"
+        android:layout_height="@dimen/main_options_ic_size"
+        android:background="@drawable/round_selectable_bg_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_quick_sell"
+        app:layout_constraintEnd_toStartOf="@id/pinder_ic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quick_sell_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_sell"
+        app:layout_constraintEnd_toEndOf="@id/quick_sell_icon"
+        app:layout_constraintStart_toStartOf="@id/quick_sell_icon"
+        app:layout_constraintTop_toBottomOf="@id/quick_sell_icon" />
+
+    <ImageView
+        android:id="@+id/pinder_ic"
+        android:layout_width="@dimen/main_options_ic_size"
+        android:layout_height="@dimen/main_options_ic_size"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/round_selectable_bg_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_pinder"
+        app:layout_constraintEnd_toStartOf="@id/doctor_ic"
+        app:layout_constraintStart_toEndOf="@id/quick_sell_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pinder_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pinder"
+        app:layout_constraintEnd_toEndOf="@id/pinder_ic"
+        app:layout_constraintStart_toStartOf="@id/pinder_ic"
+        app:layout_constraintTop_toBottomOf="@id/pinder_ic" />
+
+    <ImageView
+        android:id="@+id/doctor_ic"
+        android:layout_width="@dimen/main_options_ic_size"
+        android:layout_height="@dimen/main_options_ic_size"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/round_selectable_bg_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_doctor"
+        app:layout_constraintEnd_toStartOf="@id/enroll_ic"
+        app:layout_constraintStart_toEndOf="@id/pinder_ic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/doctor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/veterinarian"
+        app:layout_constraintEnd_toEndOf="@id/doctor_ic"
+        app:layout_constraintStart_toStartOf="@id/doctor_ic"
+        app:layout_constraintTop_toBottomOf="@id/doctor_ic" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/grooming_ic"-->
+<!--        android:layout_width="@dimen/main_options_ic_size"-->
+<!--        android:layout_height="@dimen/main_options_ic_size"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/round_selectable_bg_dark"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:padding="8dp"-->
+<!--        android:src="@drawable/ic_grooming"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/products_ic"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/quick_sell_text" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/grooming"-->
+<!--        style="@style/MainOptionsTitleStyle"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/grooming_ic"-->
+<!--        app:layout_constraintStart_toStartOf="@id/grooming_ic"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/grooming_ic" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/products_ic"-->
+<!--        android:layout_width="@dimen/main_options_ic_size"-->
+<!--        android:layout_height="@dimen/main_options_ic_size"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/round_selectable_bg_dark"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:padding="8dp"-->
+<!--        android:src="@drawable/ic_products"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/pinder_ic"-->
+<!--        app:layout_constraintStart_toStartOf="@id/pinder_ic"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/pinder_text" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/products"-->
+<!--        style="@style/MainOptionsTitleStyle"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/products_ic"-->
+<!--        app:layout_constraintStart_toStartOf="@id/products_ic"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/products_ic" />-->
+
+    <ImageView
+        android:id="@+id/enroll_ic"
+        android:layout_width="@dimen/main_options_ic_size"
+        android:layout_height="@dimen/main_options_ic_size"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/round_selectable_bg_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_enroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/doctor_ic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enroll"
+
+        app:layout_constraintEnd_toEndOf="@id/enroll_ic"
+        app:layout_constraintStart_toStartOf="@id/enroll_ic"
+        app:layout_constraintTop_toBottomOf="@id/enroll_ic" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

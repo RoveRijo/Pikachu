@@ -46,3 +46,19 @@ data class LoanApplicationLead(
     @SerializedName("rate_of_interest")
     val rateOfInterest: Float,
 )
+
+data class PetCard(
+    @SerializedName("image_url")
+    val imageUrl: String,
+    @SerializedName("price")
+    val price: String
+)
+
+data class StoreCard(
+    @SerializedName("image_url")
+    val imageUrl: String,
+    @SerializedName("price")
+    val price: String
+)
+
+

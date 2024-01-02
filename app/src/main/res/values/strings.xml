@@ -24,4 +24,15 @@
     <string name="report">Report</string>
     <string name="country_code_india">+91</string>
     <string name="some_problem_occurred">Some problem occured!</string>
+    <string name="home">Home</string>
+    <string name="chats">Chats</string>
+    <string name="my_hub">My Hub</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quick_sell">Quick Sell</string>
+    <string name="pinder">Pinder</string>
+    <string name="veterinarian">Veterinarian</string>
+    <string name="grooming">Grooming</string>
+    <string name="products">Products</string>
+    <string name="enroll">Enroll</string>
 </resources>

@@ -9,5 +9,6 @@
     <color name="primary_action_color">#99000000</color>
     <color name="container_bg">#4D000000</color>
     <color name="focused">#fff9c4</color>
+    <color name="brand_yellow">#F7AB00</color>
 </resources>
 

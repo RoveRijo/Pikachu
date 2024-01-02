@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pet_card_photo_width">132dp</dimen>
+    <dimen name="item_spacing_home_rv">8dp</dimen>
+    <dimen name="main_options_ic_size">58dp</dimen>
+</resources>

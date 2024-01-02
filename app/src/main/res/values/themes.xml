@@ -23,4 +23,10 @@
         <item name="postSplashScreenTheme">@style/Theme.Pikachu</item>
     </style>
 
+<!--    <style name="MainOptionsTitleStyle" parent="android:TextAppearance">-->
+<!--        &lt;!&ndash; Set text attributes &ndash;&gt;-->
+<!--        <item name="android:textColor">@android:color/p</item> &lt;!&ndash; Text color (black in this case) &ndash;&gt;-->
+<!--        &lt;!&ndash; Add more attributes as needed &ndash;&gt;-->
+<!--    </style>-->
+
 </resources>

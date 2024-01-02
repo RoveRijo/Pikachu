@@ -2,7 +2,7 @@ package com.pikachu.app.application
 
 import android.app.Activity
 import android.content.Intent
-import com.pikachu.app.ui.HomeActivity
+import com.pikachu.app.ui.home.HomeActivity
 import com.pikachu.app.ui.onboarding.LoginActivity
 import com.pikachu.app.ui.onboarding.OtpActivity
 

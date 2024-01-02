@@ -1,5 +1,6 @@
 package com.pikachu.app.ui
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -8,6 +9,7 @@ import com.pikachu.app.databinding.ActivitySplashBinding
 import com.pikachu.app.utils.isUserLoggedIn
 
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,12 +17,14 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        if (isUserLoggedIn() /*&& Utils.allPermissionsGranted(this@SplashActivity)*/) {
-            ActivityLauncher.launchHomeActivity(this)
-            finish()
-        } else {
-            ActivityLauncher.launchLoginActivity(this)
-            finish()
-        }
+//        if (isUserLoggedIn() /*&& Utils.allPermissionsGranted(this@SplashActivity)*/) {
+//            ActivityLauncher.launchHomeActivity(this)
+//            finish()
+//        } else {
+//            ActivityLauncher.launchLoginActivity(this)
+//            finish()
+//        }
+        ActivityLauncher.launchHomeActivity(this)
+        finish()
     }
 }
